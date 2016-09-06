@@ -192,7 +192,7 @@ def initLogging(verbose=2, log_file="", enable_loggers=[]):
     if not log_file:
         myHandler = logging.StreamHandler(sys.stdout)
     else:
-        myHandler = logging.FileHandler(log_file)
+        myHandler = logging.WatchedFileHandler(log_file)
 #    consoleHandler = logging.StreamHandler(sys.stderr)
     myHandler.setFormatter(formatter)
     myHandler.setLevel(logging.DEBUG)
